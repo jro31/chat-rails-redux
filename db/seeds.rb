@@ -15,7 +15,7 @@ puts "Generating channels..."
 channels = Channel.create([{ name: 'general' }, { name: 'London' }, { name: 'Ruby' }, { name: 'Rails' }, { name: 'React / Redux' }])
 
 puts "Generating users..."
-users = User.create([{ email: 'a@a.a', password: 'aaaaaaaa' }, { email: 'b@b.b', password: 'bbbbbbbb'}, { email: 'c@c.c', password: 'cccccccc' }])
+users = User.create([{ email: 'a@a.a', password: 'aaaaaaaa', nickname: Faker::Name.first_name }, { email: 'b@b.b', password: 'bbbbbbbb', nickname: Faker::Name.first_name }, { email: 'c@c.c', password: 'cccccccc', nickname: nil }])
 
 puts "Generating messages..."
 100.times do
